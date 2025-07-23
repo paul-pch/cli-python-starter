@@ -8,6 +8,7 @@ PIP := $(VENV_BIN)/pip
 PYTHON_CMD := $(VENV_BIN)/python
 SOURCE_DIR := app
 TEST_DIR := tests
+PRE_COMMIT := $(VENV_BIN)/pre-commit
 
 # Virtual environment management
 .PHONY: venv
@@ -53,6 +54,12 @@ integrate:
 clean:
 	rm -rf dist build *.egg-info
 	@echo "Build artifacts removed"
+
+# Pre-commit
+.PHONY: pre-commit
+pre-commit: install
+	$(PRE_COMMIT) install
+	@echo "Pre-commit hooks installed"
 
 # Default target
 .PHONY: all
