@@ -38,7 +38,7 @@ lint: install
 	@echo "Ruff linting checked"
 
 .PHONY: test
-test: lint
+test:
 	$(PYTHON_CMD) -m pytest $(TEST_DIR) --cov=$(SOURCE_DIR) --cov-report=html:coverage-report
 	@echo "Tests completed"
 

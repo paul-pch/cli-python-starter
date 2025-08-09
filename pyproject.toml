@@ -44,7 +44,9 @@ ignore = [
   "D104",  # missing package docstring
   "D105",  # missing magic method docstring
   "D106",  # missing nested class docstring
-  "D107"   # missing __init__ docstring
+  "D107",  # missing __init__ docstring
+  "S101",
+  "T201"   # usage of print
 ]
 fixable = ["ALL"]
 dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
