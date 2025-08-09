@@ -4,5 +4,5 @@ repos:
     rev: v0.6.1
     hooks:
       - id: ruff
-        args: [ --fix ]
+        args: [ --fix, --exit-non-zero-on-fix    ]
         additional_dependencies: [ ruff==0.6.1 ]
